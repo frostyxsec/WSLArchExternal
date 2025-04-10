@@ -269,6 +269,8 @@ passwd youruser
 
 ---
 
+## DONT PLUG OUT THE EXTERNAL STORAGE WHILE YOUR DEVICE IS ACTIVE, TURN OFF FIRST
+
 ## 💬 Credits
 
 Created by frosty
