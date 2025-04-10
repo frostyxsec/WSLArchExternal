@@ -1,4 +1,3 @@
-```
 # Arch Linux on WSL2 (External Drive Setup)
 
 This repository contains a step-by-step guide to install **Arch Linux** on **WSL2** (Windows Subsystem for Linux) and store the distribution on an **external hard drive** to save internal storage.
