@@ -147,6 +147,129 @@ makepkg -si
 
 ---
 
+```
+# 🐧 Arch Linux on WSL with Yay Support
+
+A guide to set up Arch Linux on Windows Subsystem for Linux (WSL) with `yay` AUR helper, using a **non-root user** for safety.
+
+> ⚠️ This guide assumes you already have Arch Linux installed under WSL. If not, please install a WSL Arch base from [https://github.com/yuk7/ArchWSL](https://github.com/yuk7/ArchWSL) or any other trusted repo.
+
+---
+
+## 📜 Prerequisites
+
+Make sure you:
+- Are **not running WSL as root**
+- Have internet access inside WSL
+- Have updated your system using `sudo pacman -Syu`
+
+---
+
+## ✅ Configuration
+
+### Step 1: Enable systemd & set default user
+
+Create or edit `/etc/wsl.conf`:
+
+```ini
+[boot]
+systemd=true
+
+[automount]
+enabled = true
+options = "metadata"
+mountFsTab = true
+
+[user]
+default=youruser
+```
+
+> Replace `youruser` with your actual non-root username.
+
+Then restart WSL:
+
+```powershell
+wsl --shutdown
+```
+
+Run Arch again:
+
+```powershell
+wsl -d <YourDistroName>
+```
+
+Now it should log in as your normal user.
+
+---
+
+## 📦 Install Base Development Tools
+
+From your non-root user (e.g., `youruser`):
+
+```bash
+sudo pacman -Syu git base-devel
+```
+
+---
+
+## 🔧 Install Yay (AUR Helper)
+
+```bash
+cd ~
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
+
+> ❗ **Do NOT run `makepkg` as root.** It will throw an error and can harm your system.
+
+---
+
+## 🎉 Usage
+
+Now you can install AUR packages easily:
+
+```bash
+yay -S <package-name>
+```
+
+Example:
+
+```bash
+yay -S google-chrome
+```
+
+---
+
+## 💡 Tips
+
+- If you see errors with package downloads, try switching mirrors with `sudo reflector` or edit `/etc/pacman.d/mirrorlist`.
+- You can configure yay with `yay --editmenu` to your preference.
+
+---
+
+## 🛑 Troubleshooting
+
+**Q: I still log in as root even after editing wsl.conf?**
+
+A: Make sure you've shut down WSL fully:
+```powershell
+wsl --shutdown
+```
+
+Also, confirm your user exists:
+```bash
+id youruser
+```
+
+If not, create it:
+```bash
+useradd -m youruser
+passwd youruser
+```
+
+---
+
 ## 💬 Credits
 
 Created by frosty
