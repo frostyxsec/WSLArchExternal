@@ -147,14 +147,6 @@ makepkg -si
 
 ---
 
-## 📄 License
-
-MIT License
-
----
-
 ## 💬 Credits
 
 Created by frosty
-Contributions, improvements, and pull requests are welcome!
-```
