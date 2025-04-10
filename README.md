@@ -147,7 +147,6 @@ makepkg -si
 
 ---
 
-```
 # 🐧 Arch Linux on WSL with Yay Support
 
 A guide to set up Arch Linux on Windows Subsystem for Linux (WSL) with `yay` AUR helper, using a **non-root user** for safety.
