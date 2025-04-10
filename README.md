@@ -269,7 +269,7 @@ passwd youruser
 
 ---
 
-## DONT PLUG OUT THE EXTERNAL STORAGE WHILE YOUR DEVICE IS ACTIVE, TYPE wsl --shutdown first
+## DONT PLUG OUT THE EXTERNAL STORAGE WHILE YOUR DEVICE IS ACTIVE, TYPE wsl --shutdown first and donf forget eject ur external storage
 
 ## 💬 Credits
 
