@@ -6,7 +6,7 @@ This repository contains a step-by-step guide to install **Arch Linux** on **WSL
 
 - Windows 10/11 with WSL2 enabled
 - External drive (e.g., `E:\`)
-- Arch Linux rootfs (`.tar.gz`) or AppX package
+- Arch Linux rootfs (`.tar.gz`) or AppX package (if using AppX package, extract AppX package first)
 - Basic PowerShell knowledge
 
 ---
@@ -155,10 +155,6 @@ MIT License
 
 ## 💬 Credits
 
-Created by [Your Name Here]  
+Created by frosty
 Contributions, improvements, and pull requests are welcome!
 ```
-
----
-
-Kalau kamu butuh `README` versi bahasa Indonesia juga untuk dokumentasi bilingual, tinggal bilang aja ya! Mau sekalian aku bantu bikin file `neofetch.png` buat ditempel di bagian screenshot?
